@@ -1,5 +1,6 @@
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/Application.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/control/ProductsController.java
+/home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/filters/CORSFilter.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/dao/ProductDaoImpl.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/model/ShoppingCart.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop-rest-service/src/main/java/nl/hiephiepmuziek/model/Product.java
