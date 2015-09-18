@@ -29,9 +29,7 @@ public class ShoppingCartController {
     
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Product> getProducts() {
-		List<Product> products = new ArrayList<Product>();
-		products.addAll(shoppingcart.getCart());
-		return products;
+		return shoppingcart.getCart();
 	}
 	
 	@RequestMapping(value="/count", method = RequestMethod.GET)

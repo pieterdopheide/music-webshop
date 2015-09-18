@@ -21,7 +21,6 @@ public class ProductsController {
 		ProductDao productDao = context.getBean(ProductDao.class);
 		List<Product> products = productDao.list();
 		context.close();
-		
 		return products;
 	}
 	
@@ -38,17 +37,7 @@ public class ProductsController {
 		Product product = null;
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4.xml");
 		ProductDao productDao = context.getBean(ProductDao.class);
-		
-		for (Product p : productDao.list()) {
-			if (p.getId() == id) {
-				product = p;
-			}
-		}
-		
-		if (product == null) {
-			throw new RuntimeException("Get: Product with " + id + " not found");
-		}
-		
+		product = productDao.getProduct(id);
 		return product;
 	}
 

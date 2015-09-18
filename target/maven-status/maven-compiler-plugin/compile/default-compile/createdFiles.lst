@@ -1,5 +1,4 @@
 nl/hiephiepmuziek/model/ShoppingCart.class
-nl/hiephiepmuziek/model/ProductDao.class
 nl/hiephiepmuziek/dao/ProductDaoImpl.class
 nl/hiephiepmuziek/model/Product.class
 nl/hiephiepmuziek/dao/ProductDao.class
