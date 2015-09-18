@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>HiepHiepMuziek</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  -->
+  <link rel="stylesheet" href="app.css">
+  <!--
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  -->
+
+  <!-- jQuery, requered by bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/">HiepHiepMuziek</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse" <!--ng-controller="HeaderController"-->>
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active: isActive('') }"><a href="#/">Home</a></li>
+          <li ng-class="{ active: isActive('/products') }"><a href="#/products">Products</a></li>
+          <li ng-class="{ active: isActive('/shopping-cart') }"><a href="#/shopping-cart">ShoppingCart</a></li>
+          <li ng-class="{ active: isActive('/about') }"><a href="#/about">About</a></li>
+          <li ng-class="{ active: isActive('/contact') }"><a href="#/contact">Contact</a></li>
+          <li ng-class="{ active: isActive('/signin') }"><a href="#/signin">Signin</a></li>
+          <li ng-class="{ active: isActive('/register') }"><a href="#/register">Register</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <div ng-view></div>
+  </div><!-- /.container -->
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Copyright 2015</p>
+    </div>
+  </footer>
+
+  <!-- angularjs -->
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>-->
+  
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  
+  <script src="app.js"></script>
+  <script src="views/home/home.js"></script>
+  <script src="views/products/products.js"></script>
+  <script src="views/product-detail/product-detail.js"></script>
+  <script src="views/shopping-cart/shopping-cart.js"></script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!--
+  <script src="../node_modules/bootstrap/js/bootstrap.min.js"></script>
+  -->
+</body>
+
+</html>

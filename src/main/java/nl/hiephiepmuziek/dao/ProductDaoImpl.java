@@ -24,5 +24,11 @@ public class ProductDaoImpl implements ProductDao {
         session.close();
         return productList;
 	}
+	
+	public Product getProduct(int id) {
+		Session session = this.sessionFactory.openSession();
+		Product product = (Product) session.get(Product.class, id);
+		return product;
+	}
 
 }

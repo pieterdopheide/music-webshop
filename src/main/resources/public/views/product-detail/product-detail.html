@@ -1,0 +1,17 @@
+<img ng-src="{{product.imageurl}}" class="product">
+
+<h1>{{product.name}}</h1>
+
+<p>{{product.snippet}}</p>
+
+<p>Price: {{product.price | currency}}</p>
+<p>Stock: {{product.stock}}</p>
+
+<div ng-controller="ShoppingCartCtrl">
+  <button type="button" class="btn btn-success" ng-click="add(product)">
+    <span class="glyphicon glyphicon-ok"></span> Add to cart
+  </button>
+  <button type="button" class="btn btn-danger" ng-click="remove(product)">
+    <span class="glyphicon glyphicon-remove"></span> Remove
+  </button>
+</div>

@@ -8,4 +8,6 @@ public interface ProductDao {
 	
 	public List<Product> list();
 
+	public Product getProduct(int id);
+
 }

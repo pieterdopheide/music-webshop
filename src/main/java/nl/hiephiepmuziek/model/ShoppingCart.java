@@ -1,34 +1,36 @@
 package nl.hiephiepmuziek.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCart {
-	
-	private List<Product> cart;
-	
-	public ShoppingCart() {
-		this.cart = new ArrayList<Product>();
-	}
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+@Component
+@Scope(value="session")
+public class ShoppingCart implements Serializable {
+	
+	private List<Product> cart = new ArrayList<Product>();
+	
 	public List<Product> getCart() {
 		return cart;
 	}
 	
 	public void addToCart(Product product) {
-		boolean add = false;
-		
-		for (Product p : cart) {
-			if (p.getId() == product.getId()) {
-//				p.setQuantity(p.getQuantity() + 1);
-				add = true;
-			}
-		}
-		
-		if (!add) {
+//		boolean add = false;
+//		
+//		for (Product p : cart) {
+//			if (p.getId() == product.getId()) {
+////				p.setQuantity(p.getQuantity() + 1);
+//				add = true;
+//			}
+//		}
+//		
+//		if (!add) {
 			cart.add(product);
-		}
+//		}
 	}
 	
 	public void removeFromCart(int id) {
@@ -41,13 +43,14 @@ public class ShoppingCart {
 	}
 	
 	public int productCount() {
-		int prodCount = 0;
-		
-		for (Product product : cart) {
+//		int prodCount = 0;
+//		
+//		for (Product product : cart) {
 //			prodCount += product.getQuantity();
-		}
-
-		return prodCount;
+//		}
+//
+//		return prodCount;
+		return cart.size();
 	}
 	
 	public BigDecimal total() {
