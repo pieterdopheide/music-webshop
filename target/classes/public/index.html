@@ -46,9 +46,9 @@
         </button>
         <a class="navbar-brand" href="#/">HiepHiepMuziek</a>
       </div>
-      <div id="navbar" class="collapse navbar-collapse" <!--ng-controller="HeaderController"-->>
+      <div id="navbar" class="collapse navbar-collapse" ng-controller="NavigationCtrl">
         <ul class="nav navbar-nav">
-          <li ng-class="{ active: isActive('') }"><a href="#/">Home</a></li>
+          <li ng-class="{ active: isActive('/home') }"><a href="#/">Home</a></li>
           <li ng-class="{ active: isActive('/products') }"><a href="#/products">Products</a></li>
           <li ng-class="{ active: isActive('/shopping-cart') }"><a href="#/shopping-cart">ShoppingCart</a></li>
           <li ng-class="{ active: isActive('/about') }"><a href="#/about">About</a></li>
@@ -77,6 +77,7 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   
   <script src="app.js"></script>
+  <script src="navigation.js"></script>
   <script src="views/home/home.js"></script>
   <script src="views/products/products.js"></script>
   <script src="views/product-detail/product-detail.js"></script>

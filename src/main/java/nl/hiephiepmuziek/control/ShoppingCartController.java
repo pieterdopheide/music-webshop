@@ -45,7 +45,7 @@ public class ShoppingCartController {
 	}
 	
 	@RequestMapping(value="/add/{id}", method = RequestMethod.POST)
-	public void addProduct(@PathVariable int id, @ModelAttribute("shoppingCart") ShoppingCart shoppingcart) {
+	public void addProduct(@PathVariable int id) {
 		System.out.println("Added product with id: " + id + " to cart");
 		
 		Product product = null;
