@@ -7,9 +7,10 @@ angular.module('myApp', [
   'myApp.home',
   'myApp.products',
   'myApp.product-detail',
-  'myApp.shopping-cart'
+  'myApp.shopping-cart',
+  'myApp.login'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) { // Login tutorial, added $httpProvider
   $routeProvider.
 		when('/products', {
 			templateUrl: 'views/products/products.html',
@@ -23,5 +24,12 @@ config(['$routeProvider', function($routeProvider) {
 	        templateUrl: 'views/shopping-cart/shopping-cart.html',
 	        controller: 'ShoppingCartCtrl'
 	    }).
+	    when('/login', {
+	        templateUrl: 'views/login/login.html',
+	        controller: 'LoginCtrl'
+	    }).
 		otherwise({redirectTo: '/home'});
+
+		// Login tutorial
+		$httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 }]);

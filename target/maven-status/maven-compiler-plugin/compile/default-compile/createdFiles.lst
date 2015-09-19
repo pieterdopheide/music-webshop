@@ -1,6 +1,8 @@
 nl/hiephiepmuziek/model/ShoppingCart.class
+nl/hiephiepmuziek/filters/CsrfHeaderFilter.class
 nl/hiephiepmuziek/dao/ProductDaoImpl.class
 nl/hiephiepmuziek/model/Product.class
+nl/hiephiepmuziek/configuration/WebSecurityConfig.class
 nl/hiephiepmuziek/dao/ProductDao.class
 nl/hiephiepmuziek/filters/CORSFilter.class
 nl/hiephiepmuziek/control/ShoppingCartController.class

@@ -9,6 +9,10 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', [function() {
+.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
+
+  $http.get('/resource/').success(function(data) {
+    $scope.greeting = data;
+  })
 
 }]);
