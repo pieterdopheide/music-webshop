@@ -1,6 +1,7 @@
 package nl.hiephiepmuziek;
 
 import java.security.Principal;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -13,11 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Application {
-	
-	@RequestMapping("/user")
-	  public Principal user(Principal user) {
-	    return user;
-	  }
 	
 	@RequestMapping("/resource")
 	  public Map<String,Object> home() {

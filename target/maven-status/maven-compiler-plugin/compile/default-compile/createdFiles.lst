@@ -4,7 +4,11 @@ nl/hiephiepmuziek/dao/ProductDaoImpl.class
 nl/hiephiepmuziek/model/Product.class
 nl/hiephiepmuziek/configuration/WebSecurityConfig.class
 nl/hiephiepmuziek/dao/ProductDao.class
+nl/hiephiepmuziek/dao/UserDaoImpl.class
+nl/hiephiepmuziek/control/UserController.class
 nl/hiephiepmuziek/filters/CORSFilter.class
 nl/hiephiepmuziek/control/ShoppingCartController.class
+nl/hiephiepmuziek/dao/UserDao.class
 nl/hiephiepmuziek/Application.class
 nl/hiephiepmuziek/control/ProductsController.class
+nl/hiephiepmuziek/model/User.class
