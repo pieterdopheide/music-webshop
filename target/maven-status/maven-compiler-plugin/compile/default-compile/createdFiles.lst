@@ -3,10 +3,13 @@ nl/hiephiepmuziek/filters/CsrfHeaderFilter.class
 nl/hiephiepmuziek/dao/ProductDaoImpl.class
 nl/hiephiepmuziek/model/Product.class
 nl/hiephiepmuziek/configuration/WebSecurityConfig.class
+nl/hiephiepmuziek/dao/UserRoleDao.class
+nl/hiephiepmuziek/model/UserRole.class
 nl/hiephiepmuziek/dao/ProductDao.class
 nl/hiephiepmuziek/dao/UserDaoImpl.class
 nl/hiephiepmuziek/control/UserController.class
 nl/hiephiepmuziek/filters/CORSFilter.class
+nl/hiephiepmuziek/dao/UserRoleDaoImpl.class
 nl/hiephiepmuziek/control/ShoppingCartController.class
 nl/hiephiepmuziek/dao/UserDao.class
 nl/hiephiepmuziek/Application.class

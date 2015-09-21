@@ -22,6 +22,8 @@
         <property name="annotatedClasses">
             <list>
                 <value>nl.hiephiepmuziek.model.Product</value>
+                <value>nl.hiephiepmuziek.model.User</value>
+                <value>nl.hiephiepmuziek.model.UserRole</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -36,4 +38,13 @@
     <bean id="productDao" class="nl.hiephiepmuziek.dao.ProductDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
     </bean>
+        
+    <bean id="userDao" class="nl.hiephiepmuziek.dao.UserDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </bean>
+    
+    <bean id="userRoleDao" class="nl.hiephiepmuziek.dao.UserRoleDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </bean>
+    
 </beans>

@@ -62,6 +62,7 @@
           <li ng-class="{ active: isActive('/contact') }"><a href="#/contact">Contact</a></li>
           -->
           <li ng-class="{ active: isActive('/login') }" ng-show="!authenticated"><a href="#/login">Login</a></li>
+          <li ng-class="{ active: isActive('/register') }" ng-show="!authenticated"><a href="#/register">Register</a></li>
           <li ng-show="authenticated"><a href="#">{{username}}</a></li>
           <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
           <!--
@@ -95,6 +96,7 @@
   <script src="/views/product-detail/product-detail.js"></script>
   <script src="/views/shopping-cart/shopping-cart.js"></script>
   <script src="/views/login/login.js"></script>
+  <script src="/views/register/register.js"></script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

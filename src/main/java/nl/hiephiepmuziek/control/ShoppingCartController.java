@@ -1,14 +1,12 @@
 package nl.hiephiepmuziek.control;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,6 +42,7 @@ public class ShoppingCartController {
 		return String.valueOf(count);
 	}
 	
+	@SuppressWarnings("resource")
 	@RequestMapping(value="/add/{id}", method = RequestMethod.POST)
 	public void addProduct(@PathVariable int id) {
 		System.out.println("Added product with id: " + id + " to cart");

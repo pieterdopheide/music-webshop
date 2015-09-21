@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.products',
   'myApp.product-detail',
   'myApp.shopping-cart',
-  'myApp.login'
+  'myApp.login',
+  'myApp.register'
 ]).
 config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) { // Login tutorial, added $httpProvider
   $routeProvider.

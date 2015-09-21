@@ -24,6 +24,7 @@ public class ProductsController {
 		return products;
 	}
 	
+	@SuppressWarnings("resource")
 	@RequestMapping(value = "/count", method = RequestMethod.GET)
 	public String getCount() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4.xml");
@@ -32,6 +33,7 @@ public class ProductsController {
 		return String.valueOf(count);
 	}
 	
+	@SuppressWarnings("resource")
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Product getProduct(@PathVariable int id) {
 		Product product = null;

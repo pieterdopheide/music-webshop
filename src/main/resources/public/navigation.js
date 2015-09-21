@@ -15,6 +15,7 @@ angular.module('myApp.navigation', ['ngRoute'])
 $scope.logout = function() {
   $http.post('logout', {}).success(function() {
     $rootScope.authenticated = false;
+    $rootScrope.username = ''; // added code to display username
     $location.path("/");
   }).error(function(data) {
     $rootScope.authenticated = false;
@@ -30,7 +31,7 @@ $scope.logout = function() {
     $http.get('user', {headers : headers}).success(function(data) {
       if (data.name) {
         $rootScope.authenticated = true;
-        $rootScope.username = 'admin';
+        $rootScope.username = data.name; // added code to display username
       } else {
         $rootScope.authenticated = false;
       }
@@ -50,7 +51,6 @@ $scope.logout = function() {
         if ($rootScope.authenticated) {
           $location.path("/");
           $scope.error = false;
-          $route.reload(); // when logged in, refresh to show username in navigationbar
         } else {
           $location.path("/login");
           $scope.error = true;
@@ -59,11 +59,10 @@ $scope.logout = function() {
   };
 
   // end tutorial code
-// $scope.getUsername = function() {
-  $http.get('http://localhost:8080/user').success(function(data) {
-		$scope.username = data.name;
-		console.log('Username: ');
-		console.log(data.name);
-	});
+ //  $http.get('http://localhost:8080/user').success(function(data) {
+	// 	$scope.username = data.name;
+	// 	console.log('Username: ');
+	// 	console.log(data.name);
+	// });
 
 }]);
