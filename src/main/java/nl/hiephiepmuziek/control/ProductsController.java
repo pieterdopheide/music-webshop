@@ -15,12 +15,12 @@ import nl.hiephiepmuziek.model.Product;
 @RequestMapping(value="/rest/products")
 public class ProductsController {
 	
+	@SuppressWarnings("resource")
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Product> getProducts() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4.xml");
 		ProductDao productDao = context.getBean(ProductDao.class);
 		List<Product> products = productDao.list();
-		context.close();
 		return products;
 	}
 	

@@ -17,7 +17,8 @@ angular.module('myApp.register', ['ngRoute'])
 					};
 
 	$http.post('http://localhost:8080/user/register', userObj).success(function(data) {
-		alert('Username: ' + credentials.username + ' passw: ' + credentials.password);
+		// alert('Username: ' + credentials.username + ' passw: ' + credentials.password);
+		alert('Registered!');
 		$scope.products = data;
 		console.log('succes');
 		console.log(data);

@@ -9,7 +9,8 @@ angular.module('myApp', [
   'myApp.product-detail',
   'myApp.shopping-cart',
   'myApp.login',
-  'myApp.register'
+  'myApp.register',
+  'myApp.order-history'
 ]).
 config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) { // Login tutorial, added $httpProvider
   $routeProvider.
@@ -28,6 +29,10 @@ config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvide
 	    when('/login', {
 	        templateUrl: 'views/login/login.html',
 	        controller: 'LoginCtrl'
+	    }).
+	    when('/order-history', {
+	        templateUrl: 'views/order-history/order-history.html',
+	        controller: 'OrderHistoryCtrl'
 	    }).
 		otherwise({redirectTo: '/home'});
 

@@ -1,28 +1,39 @@
 package nl.hiephiepmuziek.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+@SuppressWarnings("serial")
 @Entity
 @Table(name="products")
-public class Product {
+public class Product implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
+	
 	private String name;
 	private String snippet;
 	private String imageurl;
 	private BigDecimal price;
 	private int stock;
-//	private int quantity = 1;
+	
+	@JsonBackReference // remove???
+	@ManyToMany(fetch = FetchType.EAGER)
+	private Set<Order> orders;
 	
 	public Product() {}
 	
@@ -80,12 +91,12 @@ public class Product {
 		this.stock = stock;
 	}
 
-//	public int getQuantity() {
-//		return quantity;
-//	}
-//
-//	public void setQuantity(int quantity) {
-//		this.quantity = quantity;
-//	}
+	public Set<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(Set<Order> orders) {
+		this.orders = orders;
+	}
 
 }

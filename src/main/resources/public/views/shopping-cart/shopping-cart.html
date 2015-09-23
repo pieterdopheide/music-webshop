@@ -6,9 +6,9 @@
       <thead>
         <tr>
           <th>Product</th>
-          <th>Quantity</th>
+          <!--<th>Quantity</th>-->
           <th class="text-center">Price</th>
-          <th class="text-center">Total</th>
+          <!--<th class="text-center">Total</th>-->
           <th> </th>
         </tr>
       </thead>
@@ -19,22 +19,22 @@
               <a class="thumbnail pull-left" href="#/products/{{product.id}}"> <img class="media-object" ng-src="{{product.imageurl}}" style="width: 72px; height: 72px;"> </a>
               <div class="media-body">
                 <h4 class="media-heading"><a href="#/products/{{product.id}}">{{product.name}}</a></h4>
-                <h5 class="media-heading"> by <a href="#/products/{{product.id}}">Brand name</a></h5>
+                <!--<h5 class="media-heading"> by <a href="#/products/{{product.id}}">Brand name</a></h5>-->
                 <span>Status: </span><span class="text-success"><strong>In Stock ({{product.stock}})</strong></span>
               </div>
             </div></td>
           <td class="col-sm-1 col-md-1" style="text-align: center">
-            <input type="email" class="form-control" id="exampleInputEmail1" value="{{product.quantity}}">
+            <!--<input type="email" class="form-control" id="exampleInputEmail1" value="{{product.quantity}}">-->
           </td>
           <td class="col-sm-1 col-md-1 text-center"><strong>{{product.price | currency}}</strong></td>
-          <td class="col-sm-1 col-md-1 text-center"><strong>{{product.price * product.quantity | currency}}</strong></td>
+          <td class="col-sm-1 col-md-1 text-center"><!--<strong>{{product.price * product.quantity | currency}}</strong>--></td>
           <td class="col-sm-1 col-md-1">
             <button type="button" class="btn btn-danger" ng-click="remove(product)">
               <span class="glyphicon glyphicon-remove"></span> Remove
             </button>
           </td>
         </tr>
-        <tr>
+        <!--<tr>
           <td>   </td>
           <td>   </td>
           <td>   </td>
@@ -47,7 +47,7 @@
           <td>   </td>
           <td><h5>Estimated shipping</h5></td>
           <td class="text-right"><h5><strong>$0.00</strong></h5></td>
-        </tr>
+        </tr>-->
         <tr>
           <td>   </td>
           <td>   </td>

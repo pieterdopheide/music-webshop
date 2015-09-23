@@ -1,0 +1,26 @@
+<p>TBD order history</p>
+
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1" ng-controller="OrderHistoryCtrl">
+    <table class="table table-hover" ng-repeat="order in orders">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Products</th>-->
+          <th>Total</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{order.id}}</td>
+          <td></td>
+          <td>{{order.orderTotal | currency}}</td>
+          <td>{{order.orderDate}}</td>
+        </tr>
+        <tr ng-repeat="product in order.products">
+          <td>{{product.name}}</td>
+        </tr>
+      </tbody>
+  </div>
+</div>
