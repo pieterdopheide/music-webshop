@@ -4,6 +4,8 @@ import java.security.Principal;
 import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -55,10 +57,14 @@ public class UserController {
 	public List<Order> orderHistory() {
 		// Get username of currently logedin user
 		// Use username to get user ID from db
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String userName = auth.getName();
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring4.xml");
+		UserDao userDao = context.getBean(UserDao.class);
+		
 		OrderDao orderDao = context.getBean(OrderDao.class);
-		List<Order> orderList = orderDao.list(2);
+		List<Order> orderList = orderDao.list(userDao.getUser(userName).getId());
 		
 //		System.out.println("Found " + orderList.size() + " orders");
 //		System.out.println("First order found: " + orderList.get(0).getUser().getUserName());

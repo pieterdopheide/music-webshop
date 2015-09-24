@@ -1,17 +1,11 @@
 package nl.hiephiepmuziek.model;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name="users")
@@ -27,10 +21,9 @@ public class User {
 	private String password;
 	private boolean enabled;
 	
-	@JsonBackReference
-//	@OneToMany(fetch=FetchType.LAZY, mappedBy="user")
-	@OneToMany(fetch=FetchType.EAGER, mappedBy="user")
-	private Set<Order> orderHistory;
+//	@JsonBackReference
+//	@OneToMany(fetch=FetchType.EAGER, mappedBy="user")
+//	private List<Order> orderHistory = new ArrayList<>();
 	
 	public int getId() {
 		return id;
@@ -64,12 +57,19 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public Set<Order> getOrderHistory() {
-		return orderHistory;
-	}
-
-	public void setOrderHistory(Set<Order> orderHistory) {
-		this.orderHistory = orderHistory;
-	}
+//	public List<Order> getOrderHistory() {
+//		return orderHistory;
+//	}
+//
+//	public void setOrderHistory(List<Order> orderHistory) {
+//		this.orderHistory = orderHistory;
+//	}
+//	
+//	public void addOrder(Order order) {
+//		this.orderHistory.add(order);
+//		if (!order.getUser().equals(this)) {
+//			order.setUser(this);
+//		}
+//	}
 
 }

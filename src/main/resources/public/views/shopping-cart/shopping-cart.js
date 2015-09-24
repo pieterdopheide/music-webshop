@@ -33,11 +33,19 @@ angular.module('myApp.shopping-cart', ['ngRoute'])
 			$route.reload(); // reload page
 		});
 	}
+
 	$scope.remove = function(product) {
 		$http.delete('http://localhost:8080/rest/shopping-cart/remove/' + product.id).success(function(data) {
 			alert('Removed ' + product.name + ' from cart!');
 			console.log('Removed product from cart:');
 			console.log(product);
+			$route.reload(); // reload page
+		});
+	}
+
+	$scope.checkout = function() {
+		$http.get('http://localhost:8080/rest/shopping-cart/checkout').success(function(data) {
+			alert('Order submitted!');
 			$route.reload(); // reload page
 		});
 	}

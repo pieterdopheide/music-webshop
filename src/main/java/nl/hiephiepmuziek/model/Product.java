@@ -2,9 +2,9 @@ package nl.hiephiepmuziek.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,8 +21,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 public class Product implements Serializable {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Column(name="product_id")
 	private int id;
 	
 	private String name;
@@ -31,9 +31,9 @@ public class Product implements Serializable {
 	private BigDecimal price;
 	private int stock;
 	
-	@JsonBackReference // remove???
-	@ManyToMany(fetch = FetchType.EAGER)
-	private Set<Order> orders;
+	@JsonBackReference
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy="products")
+	private Set<Order> orders = new HashSet<>();
 	
 	public Product() {}
 	
@@ -97,6 +97,13 @@ public class Product implements Serializable {
 
 	public void setOrders(Set<Order> orders) {
 		this.orders = orders;
+	}
+	
+	public void addOrder(Order order) {
+		this.orders.add(order);
+		if (!order.getProducts().contains(this)) {
+			order.addProduct(this);
+		}
 	}
 
 }

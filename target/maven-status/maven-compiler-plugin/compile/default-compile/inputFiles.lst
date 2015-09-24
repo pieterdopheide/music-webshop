@@ -1,10 +1,13 @@
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/model/ShoppingCart.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/filters/CsrfHeaderFilter.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/control/UserController.java
+/home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/ProductOrderDao.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/UserDao.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/model/Product.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/model/Order.java
+/home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/model/ProductOrder.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/control/ShoppingCartController.java
+/home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/ProductOrderDaoImpl.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/UserDaoImpl.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/UserRoleDao.java
 /home/student/Documents/workspace-sts-3.7.0.RELEASE/music-webshop/src/main/java/nl/hiephiepmuziek/dao/ProductDaoImpl.java

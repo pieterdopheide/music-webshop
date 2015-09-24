@@ -1,9 +1,12 @@
+nl/hiephiepmuziek/dao/ProductOrderDaoImpl.class
 nl/hiephiepmuziek/model/ShoppingCart.class
+nl/hiephiepmuziek/model/ProductOrder.class
 nl/hiephiepmuziek/filters/CsrfHeaderFilter.class
 nl/hiephiepmuziek/dao/ProductDaoImpl.class
 nl/hiephiepmuziek/model/Order.class
 nl/hiephiepmuziek/model/Product.class
 nl/hiephiepmuziek/dao/OrderDaoImpl.class
+nl/hiephiepmuziek/dao/ProductOrderDao.class
 nl/hiephiepmuziek/dao/OrderDao.class
 nl/hiephiepmuziek/configuration/WebSecurityConfig.class
 nl/hiephiepmuziek/dao/UserRoleDao.class

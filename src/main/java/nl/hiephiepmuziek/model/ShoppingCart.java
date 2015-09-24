@@ -44,5 +44,9 @@ public class ShoppingCart implements Serializable {
 		}
 		return totalCost;
 	}
+	
+	public void emptyCart() {
+		this.cart = new ArrayList<Product>();
+	}
 
 }

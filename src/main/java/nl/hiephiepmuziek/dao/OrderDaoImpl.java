@@ -20,7 +20,7 @@ public class OrderDaoImpl implements OrderDao {
 	@Override
 	public List<Order> list(int userId) {
 		Session session = this.sessionFactory.openSession();
-		Query query = session.createQuery("FROM Order WHERE user_id = :userId");
+		Query query = session.createQuery("FROM Order WHERE userId = :userId");
 		query.setParameter("userId", userId);
         List<Order> orderList = query.list();
         session.close();
