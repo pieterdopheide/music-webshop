@@ -2,14 +2,14 @@
 
 This is a simple webshop selling music instruments made as a learning project for the Java Traineeship of YoungCapital.
 
-# Technologies/frameworks used
+## Technologies/frameworks used
 - MySQL
 - Hibernate
 - Spring
 - AngularJS
 - Twitter Bootstrap
 
-# Install/Running the project
+## Install/Running the project
 - Change MySQL connection details in spring4.xml and application.properties in src/main/resources
 - Run maven clean and maven build on the project
 - Start the project
@@ -19,6 +19,6 @@ This is a simple webshop selling music instruments made as a learning project fo
 
 Everything should be working.
 
-# Known issues/bugs
+## Known issues/bugs
 - After logging in, a refresh has to be done before products can be added to the shoppingcart
 - You need to log out multiple times
